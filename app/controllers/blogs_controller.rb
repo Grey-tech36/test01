@@ -11,12 +11,13 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/new
-  def new
+  def new 
     @blog = Blog.new
   end
 
   # GET /blogs/1/edit
   def edit
+    @blog = Blog.friendly.find(params[:id]) 
   end
 
   # POST /blogs or /blogs.json

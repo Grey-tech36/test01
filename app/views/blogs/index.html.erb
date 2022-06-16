@@ -2,11 +2,14 @@
 
 <h1>Blogs</h1>
 
+
 <div id="blogs">
   <% @blogs.each do |blog| %>
     <%= render blog %>
     <p>
       <%= link_to "Show this blog", blog %>
+      <%= link_to "Edit", edit_blog_path(blog) %>
+      <%= link_to "Destroy", blog_path(blog), method: :delete %>
     </p>
   <% end %>
 </div>
